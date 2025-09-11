@@ -9,11 +9,10 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
-body{
-    overflow-x: hidden;
-}
+
 ::-webkit-scrollbar{
     width: 0px;
+    height: 0px;
 }
 section {
   width: 100%;
@@ -234,14 +233,14 @@ section.con03 {
   height: 260vh;
 }
 .con03 .title {
-  width: 100%;
+  width: 100vw;
   height: 90vh;
   text-align: center;
   font-size: 170px;
   line-height: 0.9;
   padding-top: 40vh;
   box-sizing: border-box;
-
+  overflow-x: hidden;
 }
 .con03 .work {
   font-family: "Cormorant Infant", serif;
@@ -444,4 +443,67 @@ section.con03 {
 }
 .simply-scroll .simply-scroll-clip .simply-scroll-list li img {
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .mainVisual{
+    display: none;
+  }
+  .typing-container{
+    width: 80vw;
+  }
+  .con02 .circle {
+    position: absolute;
+    background-color: #0000009a;
+    border-radius: 50%;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .con02 .text {
+    position: absolute;
+    color: #ffffff;
+  
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    text-align: center;
+    opacity: 0;
+    /* visibility: hidden; */
+    /* border: 2px solid blue; */
+  }
+  .con02 .text li {
+    font-size: 30px;
+    line-height: 2;
+  }
+  .con02 .text li:first-child {
+    margin-bottom: 100px;
+  }
+  .con02 .text li span {
+    font-weight: bold;
+    color: orange;
+  }
+  section.con03 {
+    height: calc(805px * 6 + 200px);
+  }
+  .con03 .workList {
+    width: 70%;
+    padding-top: 20vh;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .con03 .workList li {
+    width: 80%;
+    margin-top: 200px;
+  }
+  .con03 .workList li:nth-child(2n) {
+    margin-top: 200px;
+  }
+  .con04{
+    overflow-x: hidden;
+  }
+  .con04 .btnWrap{
+    display: none;
+  }
 }
