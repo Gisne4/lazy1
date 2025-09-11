@@ -449,6 +449,7 @@ section.con03 {
     display: none;
   }
   .typing-container{
+    display: none;
     width: 80vw;
   }
   .con02 .circle {
@@ -483,7 +484,7 @@ section.con03 {
     color: orange;
   }
   section.con03 {
-    height: calc(805px * 6 + 200px);
+    height: calc(805px * 6 + 300px);
   }
   .con03 .workList {
     width: 70%;
@@ -505,5 +506,11 @@ section.con03 {
   }
   .con04 .btnWrap{
     display: none;
+  }
+  .simply-scroll .simply-scroll-clip {
+    overflow: hidden;
+    transform: rotate(5deg) translate(40px, 400px) scale(1.1);
+  
+    opacity: 1;
   }
 }
