@@ -9,7 +9,9 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
-
+body{
+  background-color: black;
+}
 ::-webkit-scrollbar{
     width: 0px;
     height: 0px;
@@ -22,8 +24,9 @@ section {
 #header {
   width: 100%;
   height: 100vh;
-background-color: black;
+background-color: rgb(0, 0, 0);
   color: #fff;
+  position: relative;
 }
 
 header {
@@ -92,6 +95,8 @@ header .menuOpen {
   line-height: 1.2;
   margin: 60px 0px 150px 60px;
   display: inline-block;
+  position: absolute;
+  z-index: 5;
 }
 #header .mainText p {
   overflow: hidden;
@@ -99,16 +104,19 @@ header .menuOpen {
 
 /*subText*/
 #header .subText {
-  margin-left: 60px;
-  font-size: 30px;
+  margin-left: 5vw;
+  width: 90vw;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
 }
 
 
 .typing-container {
   font-size: 60px;
   font-weight: 400;
-  margin: 50px;
-  width: 1250px;
+  width: inherit;
   word-break: keep-all;
 }
 
@@ -178,10 +186,12 @@ header .menuOpen {
   right: 10%;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 1;
 }
 
 .mainVisual img {
   width: 600px;
+  filter: sepia(#0000009a);
 }
 
 /*con02*/
@@ -216,7 +226,7 @@ header .menuOpen {
   /* border: 2px solid blue; */
 }
 .con02 .text li {
-  font-size: 60px;
+  font-size: 54px;
 
   line-height: 1.3;
 }
@@ -446,7 +456,11 @@ section.con03 {
 }
 @media screen and (max-width: 768px) {
   .mainVisual{
-    display: none;
+    width: 100vw;
+    right: 0%;
+  }
+  .mainVisual img{
+    width: 100%;
   }
   .typing-container{
     display: none;
@@ -512,5 +526,12 @@ section.con03 {
     transform: rotate(5deg) translate(40px, 400px) scale(1.1);
   
     opacity: 1;
+  }
+  .con04 .textWrap li {
+    font-size: 38px;
+    line-height: 1.3;
+  }
+  .con04 .textWrap li.en2 {
+    padding-left: 10px;
   }
 }
